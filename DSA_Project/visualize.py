@@ -5,9 +5,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 GRAPH_FILE = os.path.join(BASE_DIR, "graph.txt")
 
-# ============================
 # READ GRAPH DATA
-# ============================
+
 with open(GRAPH_FILE, "r") as file:
     n = int(file.readline())
 
@@ -23,9 +22,9 @@ with open(GRAPH_FILE, "r") as file:
         c1, c2, dist = file.readline().split()
         edges.append((c1, c2, int(dist)))
 
-# ============================
+
 # DRAW GRAPH
-# ============================
+
 plt.figure(figsize=(8, 6))
 
 # Draw edges and distance labels
